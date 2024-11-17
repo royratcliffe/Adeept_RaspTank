@@ -289,10 +289,9 @@ if __name__ == '__main__':
 	sc = ServoCtrl()
 	sc.start()
 	while 1:
-		sc.moveAngle(0,(random.random()*100-50))
-		time.sleep(1)
-		sc.moveAngle(1,(random.random()*100-50))
-		time.sleep(1)
+		for ID in range(11, 16):
+			sc.moveAngle(ID,(random.random()*100-50))
+			time.sleep(1)
 		'''
 		sc.singleServo(0, 1, 5)
 		time.sleep(6)
